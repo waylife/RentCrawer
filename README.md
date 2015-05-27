@@ -23,7 +23,9 @@ Currently no other language documents are available, Chinese documents only.
 pip install requests
 pip install beautifulsoup4
 ```
-运行步骤：  
+运行步骤：
+
+
 1. 【必须】配置RentCrawler.py中54行key_search_word字段为你先搜索的区域
 2. 【必须】配置RentCrawler.py中55行custom_black_list字段为你不想搜到的内容
 3. 【必须】配置RentCrawler.py中56行start_time_str字段为帖子开始时间
