@@ -17,6 +17,8 @@ Currently no other language documents are available, Chinese documents only.
 ![Rent Crawelr Result](https://github.com/waylife/RentCrawer/blob/master/Images/result_1.0.png?raw=true)
 
 ##使用说明
+Python 2.7+,暂时不支持Python 3    
+需要先安装pip依赖管理工具  
 需要先安装Requests以及BeautifulSoup库，如果已经安装可以忽略，没有安装，使用以下命令安装：
 
 ``` bash
@@ -34,7 +36,7 @@ pip install beautifulsoup4
 6. 【必须】等待程序结束后打开result.html查看结果
 
 ##注意
-由于豆瓣有反刷机制，每天运行次数不要过多，有可能导致当天无法获取数据，也就是引发403错误
+由于豆瓣有反刷机制，每天运行次数不要过多，有可能导致当天无法获取数据，也就是引发403错误   
 豆瓣数据请求目前为每获得一次结果暂停1s
 
 ##反馈与建议
