@@ -14,7 +14,7 @@ Currently no other language documents are available, Chinese documents only.
 > * 可以配置帖子开始时间
 
 抓取结果示意图：
-![Rent Crawelr Result](https://github.com/waylife/RentCrawer/blob/master/Images/result_1.0.png?raw=true)
+![Rent Crawelr Result](https://github.com/waylife/RentCrawer/blob/master/Images/result_1.2.png?raw=true)
 
 ##使用说明
 Python 2.7+,暂时不支持Python 3    
@@ -28,12 +28,12 @@ pip install beautifulsoup4
 运行步骤：
 
 
-1. 【必须】配置RentCrawler.py中54行key_search_word字段为你先搜索的区域
-2. 【必须】配置RentCrawler.py中55行custom_black_list字段为你不想搜到的内容
-3. 【必须】配置RentCrawler.py中56行start_time_str字段为帖子开始时间
-4. 【可选】删除rentdata.db以及result.html文件，如果不希望本次结果与上次混合在一起，可以删除相关文件
+1. 【必须】配置config.ini中key_search_word_list字段为需要搜索的地名，可参考实例进行配置，逗号[半角逗号,不是全角逗号，]分隔   
+2. 【必须】配置config.ini中custom_black_list字段为你不想搜到的内容,不配置则为空  
+3. 【必须】配置config.ini中start_time字段为帖子开始时间
+4. 【可选】其他配置可可选择进行配置，删除rentdata.db3以及rentdata_result.html文件，如果不希望本次结果与上次混合在一起，可以删除相关文件
 5. 【必须】运行RentCrawler.py文件
-6. 【必须】等待程序结束后打开result.html查看结果
+6. 【必须】等待程序结束后打开rentdata_result.html查看结果
 
 ##注意
 由于豆瓣有反刷机制，每天运行次数不要过多，有可能导致当天无法获取数据，也就是引发403错误   
@@ -45,3 +45,6 @@ https://github.com/waylife/RentCrawer/issues/new
 
 ##改进
 欢迎各路大神提供改进意见
+
+## License
+The MIT license.
