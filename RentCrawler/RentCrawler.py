@@ -6,6 +6,7 @@ import re
 import sys
 import time
 import datetime
+import os
 
 import requests
 from bs4 import BeautifulSoup
@@ -160,7 +161,7 @@ class RentMain(object):
                     for j in range(len(search_list)):
                         keyword = search_list[j]
                         print 'start i->j %s->%s %s' %(i,j,keyword)
-                        print '>>>>>>>>>>Search %s  %s ...' % (douban_url_name[i], keyword)
+                        print '>>>>>>>>>>Search %s  %s ...' % (douban_url_name[i].encode('utf-8'), keyword)
                         url_link = douban_url[i] + keyword
                         r = requests.get(url_link, headers=self.douban_headers)
                         if r.status_code == 200:
@@ -254,7 +255,9 @@ Beijing, China
 
 class RentCrawler(object):
     def __init__(self):
-        self.config = Config.Config('config.ini')
+        this_file_dir = os.path.split(os.path.realpath(__file__))[0]
+        config_file_path = os.path.join(this_file_dir, 'config.ini')
+        self.config = Config.Config(config_file_path)
 
     def run(self):
         rentmain = RentMain(self.config)
